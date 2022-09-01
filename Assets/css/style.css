@@ -1,0 +1,221 @@
+/* var colors */
+:root {
+  --primary-color: #f6f6f2;
+  --secondary-color: #388087;
+  --alt-color: #fff;
+  --another-color: #badfe7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+  background-color: var(--primary-color);
+}
+
+/* style the header with colour*/
+.header {
+  overflow: hidden;
+  background-color: var(--primary-color);
+  padding: 20px 10px;
+}
+
+/* styles the header links */
+.header a {
+  float: left;
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* styles the logo link */
+.header a.logo {
+  font-size: 25px;
+  font: medium;
+}
+
+/* changes the background color on mouse-over */
+.header a:hover {
+  background-color: #6fb3b8;
+  color: black;
+}
+
+/* floats the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  .header-right {
+    float: none;
+  }
+}
+/*Main body styling*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--primary-color);
+}
+/*hero Styling*/
+.hero {
+  background-image: url('../images/P1.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-attachment: fixed;
+  background-position: 100%;
+  height: 100vh;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+/*abou me styling*/
+aside {
+  flex: 2;
+  padding: 50px;
+}
+
+.about-text {
+  flex: 3;
+  padding: 50px;
+  color: var(--secondary-color);
+}
+
+.sample-img {
+  background-color: var(--primary-color);
+  width: 100%;
+  padding: 0px;
+  height: auto;
+  border: 2px solid var(--secondary-color);
+}
+/*contact information styling*/
+.contact-me {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Contacts {
+  flex: 4;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-cards {
+  padding: 10px;
+  flex: 0 0 250px;
+}
+
+.contact-cards header {
+  padding: 20px;
+}
+/*my work styling*/
+.flex-container {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+.flex-container section {
+  width: 500px;
+}
+
+.flex-item-1 {
+  padding: 10px;
+  flex: 2 0 100%;
+}
+
+.flex-item-2 {
+  padding: 10px;
+}
+
+.flex-item-3 {
+  padding: 10px;
+}
+.flex-item-4 {
+  padding: 10px;
+}
+
+.flex-container header {
+  padding: 20px;
+  background-color: var(--secondary-color);
+  color: var(--alt-color);
+  text-align: center;
+}
+
+.flex-container p {
+  text-align: center;
+}
+
+.flex-container img {
+  width: 100%;
+}
+
+/*footer styling*/
+footer {
+  padding: 20px;
+  text-align: center;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/*hover and other effects*/
+a:visited, a:hover, a:focus {
+  text-decoration: none;
+  color: #000;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+body nav a:hover {
+  color: var(--alt-color);
+}
+
+body div header:hover {
+  color: var(--another-color);
+}
+
+body article div header:hover {
+  color: var(--secondary-color);
+  background-color: var(--another-color);
+}
+
+@media screen and (max-width: 768px) {
+  /* Use flex-direction to stack the navbar, sidebar, and body */
+  main,
+  nav {
+    flex-direction: column;
+  }
+  /* Make the sidebar stack below the body */
+  aside {
+    order: 2;
+  }
+}
