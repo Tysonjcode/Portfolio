@@ -133,7 +133,7 @@ aside {
 }
 /*my work styling*/
 .flex-container {
-  padding: 50px;
+  padding: 300px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
